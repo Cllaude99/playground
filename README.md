@@ -7,3 +7,5 @@
 - tanstack query
 - react-error-boundary
 - react-toastify
+- shadcn-ui
+- tailwindcss 4.0
