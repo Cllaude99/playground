@@ -4,7 +4,7 @@ import { mergeClassNames } from '../../../utils/mergeClassNames';
 
 export const ButtonVariants = cva(
   `
-  flex items-center justify-center w-full
+  flex items-center justify-center whitespace-nowrap
   disabled:cursor-not-allowed
   disabled:bg-gray-200
   disabled:text-gray-400
@@ -12,15 +12,16 @@ export const ButtonVariants = cva(
   {
     variants: {
       buttonType: {
-        primary: 'bg-danggn-primary text-white rounded-md h-[3.4375rem]',
+        primary:
+          'bg-danggn-primary hover:bg-danggn-primary/90 text-white rounded-md text-md',
       },
-      fontSize: {
-        default: 'text-md',
+      size: {
+        default: 'h-[3.4375rem] px-4 py-2 has-[>svg]:px-3',
       },
     },
     defaultVariants: {
       buttonType: 'primary',
-      fontSize: 'default',
+      size: 'default',
     },
   },
 );
@@ -36,7 +37,7 @@ interface ButtonProps
 
 export default function Button({
   buttonType,
-  fontSize,
+  size,
   isLoading,
   loadingText = '잠시만 기다려 주세요...',
   className,
@@ -51,7 +52,7 @@ export default function Button({
     <button
       type="button"
       className={mergeClassNames(
-        ButtonVariants({ buttonType, fontSize }),
+        ButtonVariants({ buttonType, size }),
         className,
       )}
       onClick={onClick}
