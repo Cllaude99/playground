@@ -5,7 +5,7 @@ import { mergeClassNames } from '../../../utils/mergeClassNames';
 export const InputVariants = cva(
   `
   flex items-center justify-center outline-none
-  rounded-[3px] py-[0.625em] pl-[0.75em] transition-colors
+  rounded-[3px] py-[1em] pl-[0.75em] transition-colors
   ring-1 ring-gray-300
   `,
   {
