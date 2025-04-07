@@ -1,10 +1,11 @@
 import { ButtonHTMLAttributes } from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
 import { mergeClassNames } from '../../../utils/mergeClassNames';
+import ButtonLoader from './ButtonLoader';
 
 export const ButtonVariants = cva(
   `
-  flex items-center justify-center whitespace-nowrap
+  flex items-center justify-center whitespace-nowrap transition-[color,box-shadow] [&_svg]:pointer-events-none shrink-0 [&_svg]:shrink-0
   disabled:cursor-not-allowed
   disabled:bg-gray-200
   disabled:text-gray-400
@@ -30,7 +31,6 @@ interface ButtonProps
   extends VariantProps<typeof ButtonVariants>,
     ButtonHTMLAttributes<HTMLButtonElement> {
   isLoading?: boolean;
-  loadingText?: string;
   className?: string;
   children: React.ReactNode;
 }
@@ -39,7 +39,6 @@ export default function Button({
   buttonType,
   size,
   isLoading,
-  loadingText = '잠시만 기다려 주세요...',
   className,
   children,
   onClick,
@@ -61,7 +60,7 @@ export default function Button({
       aria-disabled={isDisabled}
       {...rest}
     >
-      {isLoading ? loadingText : children}
+      {isLoading ? <ButtonLoader /> : children}
     </button>
   );
 }
