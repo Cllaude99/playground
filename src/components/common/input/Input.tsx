@@ -13,6 +13,7 @@ export const InputVariants = cva(
       inputType: {
         default: 'focus:ring-black',
         error: 'ring-red-500 bg-red-50 focus:ring-red-500',
+        readOnly: 'pointer-events-none ring-0 p-0',
       },
     },
     defaultVariants: {
@@ -40,7 +41,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 
     return (
       <div className="flex flex-col gap-1">
-        {label && <label className="text-sm">{label}</label>}
+        {label && (
+          <label
+            className={`text-sm ${inputType === 'readOnly' ? 'text-gray-400' : 'text-gray-700'}`}
+          >
+            {label}
+          </label>
+        )}
         <input
           ref={ref}
           className={mergeClassNames(
