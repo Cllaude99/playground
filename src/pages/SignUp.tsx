@@ -1,14 +1,15 @@
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import { useFunnel } from '@/hooks/useFunnel';
-import NameStep from '@/components/sign_up/NameStep';
-import LocationStep from '@/components/sign_up/LocationStep';
-import BirthdayStep from '@/components/sign_up/BirthDayStep';
-import AgreementStep from '@/components/sign_up/AgreementStep';
-import ConfirmStep from '@/components/sign_up/ConfirmStep';
+import NameStep from '@/components/sign_up/steps/NameStep';
+import LocationStep from '@/components/sign_up/steps/LocationStep';
+import BirthdayStep from '@/components/sign_up/steps/BirthDayStep';
+import AgreementStep from '@/components/sign_up/steps/AgreementStep';
+import ConfirmStep from '@/components/sign_up/steps/ConfirmStep';
 import { useState, useRef } from 'react';
-import BeforeButton from '@/components/sign_up/BeforeButton';
+import BeforeButton from '@/components/sign_up/steps/BeforeButton';
 import { useSyncFunnelStepWithQuery } from '@/hooks/sign_up/useSyncFunnelStepWithQuery';
 import { isUnder14 } from '@/utils/sign_up/isUnder14';
+import SignUpLayout from '@/components/sign_up/SignUpLayout';
 
 export const SignUpStep = {
   name: 'name',
@@ -73,7 +74,7 @@ export default function SignUp() {
   );
 
   return (
-    <div className="flex flex-col gap-4 h-full p-4">
+    <SignUpLayout>
       <BeforeButton onBefore={onBefore} />
       <Funnel>
         <Funnel.Step step={SignUpStep.name}>
@@ -125,6 +126,6 @@ export default function SignUp() {
           <ConfirmStep signUpData={signUpData} />
         </Funnel.Step>
       </Funnel>
-    </div>
+    </SignUpLayout>
   );
 }
