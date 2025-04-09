@@ -1,8 +1,8 @@
 import { SignUpStepData } from '@/pages/SignUp';
-import Button from '../common/button/Button';
-import StepMessage from './StepMessage';
+import Button from '../../foundation/button/Button';
+import StepMessage from '../StepMessage';
 import { useNavigate } from 'react-router-dom';
-import { Input } from '../common/input/Input';
+import { Input } from '../../foundation/input/Input';
 import { getAgeFromBirthdate } from '@/utils/sign_up/getAgeFromBirthdate';
 import { isUnder14 } from '@/utils/sign_up/isUnder14';
 

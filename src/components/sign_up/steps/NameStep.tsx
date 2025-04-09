@@ -1,7 +1,7 @@
-import { Input } from '@/components/common/input/Input';
-import Button from '@/components/common/button/Button';
+import { Input } from '@/components/foundation/input/Input';
+import Button from '@/components/foundation/button/Button';
 import { useRef, useState } from 'react';
-import StepMessage from './StepMessage';
+import StepMessage from '../StepMessage';
 
 interface InitialData {
   name: string;

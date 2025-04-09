@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Button from '@/components/common/button/Button';
-import StepMessage from './StepMessage';
+import Button from '@/components/foundation/button/Button';
+import StepMessage from '../StepMessage';
 import IconCheck from '@/assets/icons/IconCheck.svg?react';
 
 interface InitialData {

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
-import { Input } from '../common/input/Input';
-import Button from '../common/button/Button';
-import StepMessage from './StepMessage';
+import { Input } from '../../foundation/input/Input';
+import Button from '../../foundation/button/Button';
+import StepMessage from '../StepMessage';
 import { isUnder14 } from '@/utils/sign_up/isUnder14';
 import { isValidBirthdateFormat } from '@/utils/sign_up/isValidBirthdateFormat';
 import { formatBirthdate } from '@/utils/sign_up/formatBirthdate';

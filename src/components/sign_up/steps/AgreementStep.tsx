@@ -1,5 +1,5 @@
-import Button from '../common/button/Button';
-import StepMessage from './StepMessage';
+import Button from '../../foundation/button/Button';
+import StepMessage from '../StepMessage';
 
 interface AgreementStepProps {
   onNext: () => void;
