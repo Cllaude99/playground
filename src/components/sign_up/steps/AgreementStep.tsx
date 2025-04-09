@@ -18,7 +18,7 @@ export default function AgreementStep({
   };
 
   return (
-    <div className="flex flex-col h-full gap-3">
+    <>
       <StepMessage
         message={`만 14세 미만의 사용자는\n법정대리인 동의가 필요해요`}
       />
@@ -26,6 +26,6 @@ export default function AgreementStep({
       <Button onClick={handleAgreement} className="mt-auto">
         법정대리인 본인인증
       </Button>
-    </div>
+    </>
   );
 }

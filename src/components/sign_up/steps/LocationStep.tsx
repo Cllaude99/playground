@@ -47,12 +47,12 @@ export default function LocationStep({
   };
 
   return (
-    <div className="flex flex-col h-full gap-3">
+    <>
       <StepMessage message="지역을 선택해주세요" />
       <div className="flex-1 overflow-y-auto scrollbar-hide">
         <ul className="flex flex-col gap-3">
           {dummyLocations.map((location) => (
-            <PlaceItem location={location} />
+            <PlaceItem key={location} location={location} />
           ))}
         </ul>
       </div>
@@ -63,7 +63,7 @@ export default function LocationStep({
       >
         다음
       </Button>
-    </div>
+    </>
   );
 
   function PlaceItem({ location }: { location: string }) {

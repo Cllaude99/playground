@@ -70,7 +70,7 @@ export default function BirthDayStep({
   };
 
   return (
-    <div className="flex flex-col h-full gap-4">
+    <>
       <StepMessage message={`생년월일과 성별을\n입력해주세요`} />
       <Input
         ref={birthdateRef}
@@ -96,7 +96,7 @@ export default function BirthDayStep({
       <Button onClick={handleSubmit} className="mt-auto">
         다음
       </Button>
-    </div>
+    </>
   );
 
   function GenderRadioGroup({

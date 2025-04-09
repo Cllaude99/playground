@@ -67,7 +67,7 @@ export default function NameStep({
   };
 
   return (
-    <div className="flex flex-col h-full gap-3">
+    <>
       <StepMessage message={`안녕하세요!\n당근에 오신 걸 환영해요!`} />
       <Input
         ref={nameRef}
@@ -89,6 +89,6 @@ export default function NameStep({
       <Button onClick={handleSubmit} className="mt-auto">
         다음
       </Button>
-    </div>
+    </>
   );
 }
