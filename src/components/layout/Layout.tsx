@@ -1,9 +1,29 @@
-import { Outlet } from 'react-router-dom';
+import { mergeClassNames } from '@/utils/mergeClassNames';
 
-export default function Layout() {
+interface LayoutProps {
+  fullScreen?: boolean;
+  direction: 'row' | 'column';
+  className?: string;
+  children: React.ReactNode;
+}
+
+export default function Layout({
+  fullScreen = false,
+  direction,
+  className,
+  children,
+}: LayoutProps) {
   return (
-    <div className="mx-auto my-0 max-w-[480px] h-screen">
-      <Outlet />
-    </div>
+    <main
+      className={mergeClassNames(
+        `flex ${direction === 'column' ? 'flex-col' : 'flex-row'} 
+        ${fullScreen ? 'w-full max-w-none' : 'w-auto max-w-[480px]'} 
+        h-screen 
+        mx-auto my-0`,
+        className,
+      )}
+    >
+      {children}
+    </main>
   );
 }
