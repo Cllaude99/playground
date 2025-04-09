@@ -11,12 +11,6 @@ export const APIErrorFallback = ({
   if (isAxiosError(error)) {
     const errorInfo = getAPIErrorInfo(error);
 
-    if (error.response?.data?.code === 'A-003') {
-      // 관련 정보 삭제
-      window.location.href = '/';
-      return;
-    }
-
     if (errorInfo.status === '401') {
       return <Navigate to={''} replace />;
     }
