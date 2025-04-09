@@ -2,9 +2,9 @@ import { useState, useRef } from 'react';
 import { Input } from '../../foundation/input/Input';
 import Button from '../../foundation/button/Button';
 import StepMessage from '../StepMessage';
-import { isUnder14 } from '@/utils/sign_up/isUnder14';
-import { isValidBirthdateFormat } from '@/utils/sign_up/isValidBirthdateFormat';
-import { formatBirthdate } from '@/utils/sign_up/formatBirthdate';
+import { isUnder14 } from '@/components/sign_up/utils/isUnder14';
+import { isValidBirthdateFormat } from '@/components/sign_up/utils/isValidBirthdateFormat';
+import { formatBirthdate } from '@/components/sign_up/utils/formatBirthdate';
 
 interface InitialData {
   birthdate: string;
