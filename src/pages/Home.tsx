@@ -1,16 +1,19 @@
-import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
-import Icon from '@/assets/icons/IconAboutInstagram.svg?react';
+import { useNavigate } from 'react-router-dom';
+import Button from '@/components/foundation/button/Button';
+import HomeLayout from '@/components/home/HomeLayout';
 
 export default function Home() {
-  const handleClick = () => {
-    toast('Event has been created.');
-  };
+  const navigate = useNavigate();
+
   return (
-    <>
-      <h1>Home</h1>
-      <Button onClick={handleClick}>click me</Button>
-      <Icon />
-    </>
+    <HomeLayout>
+      <h3>Hello</h3>
+      <Button
+        buttonType="primary"
+        onClick={() => navigate('/sign_up', { state: { from: '/' } })}
+      >
+        회원가입
+      </Button>
+    </HomeLayout>
   );
 }
