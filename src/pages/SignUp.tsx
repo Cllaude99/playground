@@ -8,7 +8,7 @@ import ConfirmStep from '@/components/sign_up/steps/ConfirmStep';
 import { useState, useRef } from 'react';
 import BeforeButton from '@/components/sign_up/steps/BeforeButton';
 import { useSyncFunnelStepWithQuery } from '@/hooks/sign_up/useSyncFunnelStepWithQuery';
-import { isUnder14 } from '@/utils/sign_up/isUnder14';
+import { isUnder14 } from '@/components/sign_up/utils/isUnder14';
 import SignUpLayout from '@/components/sign_up/SignUpLayout';
 
 export const SignUpStep = {
