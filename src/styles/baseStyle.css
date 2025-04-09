@@ -2,16 +2,16 @@
   html {
     font-family: Pretendard, sans-serif;
   }
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 
   /* 버튼에 cursor: pointer를 기본적으로 적용 */
   button:not(:disabled),
   [role='button']:not(:disabled) {
     cursor: pointer;
+  }
+
+  /* input, textarea 포커스 제거 */
+  input:focus,
+  textarea:focus {
+    outline: none;
   }
 }
