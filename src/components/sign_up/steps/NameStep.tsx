@@ -1,5 +1,5 @@
-import { Input } from '@/components/common/input/Input';
-import Button from '@/components/common/button/Button';
+import { Input } from '@/components/ui/input/Input';
+import Button from '@/components/ui/button/Button';
 import { useRef, useState } from 'react';
 import StepMessage from '../StepMessage';
 

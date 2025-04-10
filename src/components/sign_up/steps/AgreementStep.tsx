@@ -1,4 +1,4 @@
-import Button from '../../common/button/Button';
+import Button from '../../ui/button/Button';
 import StepMessage from '../StepMessage';
 
 interface AgreementStepProps {

@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
-import { Input } from '../../common/input/Input';
-import Button from '../../common/button/Button';
+import { Input } from '../../ui/input/Input';
+import Button from '../../ui/button/Button';
 import StepMessage from '../StepMessage';
 import { isUnder14 } from '@/components/sign_up/utils/isUnder14';
 import { isValidBirthdateFormat } from '@/components/sign_up/utils/isValidBirthdateFormat';
