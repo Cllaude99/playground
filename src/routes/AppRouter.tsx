@@ -1,10 +1,10 @@
-import SomethingWentWrongPage from '@/components/error/SomethingWentWrongPage';
-import { UnknownErrorBoundary } from '@/components/error/UnknownErrorBoundary';
+import SomethingWentWrongPage from '@/components/status/error/SomethingWentWrongPage';
+import { UnknownErrorBoundary } from '@/components/status/error/UnknownErrorBoundary';
 import Home from '@/pages/Home';
 import SignUp from '@/pages/SignUp';
 import SignUpComplete from '@/pages/SignUpComplete';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import { APIErrorBoundary } from '@/components/error/APIErrorBoundary';
+import { APIErrorBoundary } from '@/components/status/error/APIErrorBoundary';
 import { Suspense } from 'react';
 import Loader from '@/components/status/loading/Loader';
 

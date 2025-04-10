@@ -1,10 +1,10 @@
 import { SignUpStepData } from '@/pages/SignUp';
-import Button from '../../ui/button/Button';
+import Button from '../../../ui/button/Button';
 import StepMessage from '../StepMessage';
 import { useNavigate } from 'react-router-dom';
-import { Input } from '../../ui/input/Input';
-import { getAgeFromBirthdate } from '@/components/sign_up/utils/getAgeFromBirthdate';
-import { isUnder14 } from '@/components/sign_up/utils/isUnder14';
+import { Input } from '../../../ui/input/Input';
+import { getAgeFromBirthdate } from '@/components/domain/sign_up/utils/getAgeFromBirthdate';
+import { isUnder14 } from '@/components/domain/sign_up/utils/isUnder14';
 
 interface ConfirmStepProps {
   signUpData: SignUpStepData;

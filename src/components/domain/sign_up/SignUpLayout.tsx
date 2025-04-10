@@ -1,4 +1,4 @@
-import Layout from '../layout/Layout';
+import Layout from '../../layout/Layout';
 
 interface SignUpLayoutProps {
   children: React.ReactNode;

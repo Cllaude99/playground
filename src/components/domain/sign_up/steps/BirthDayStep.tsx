@@ -1,10 +1,10 @@
 import { useState, useRef } from 'react';
-import { Input } from '../../ui/input/Input';
-import Button from '../../ui/button/Button';
+import { Input } from '../../../ui/input/Input';
+import Button from '../../../ui/button/Button';
 import StepMessage from '../StepMessage';
-import { isUnder14 } from '@/components/sign_up/utils/isUnder14';
-import { isValidBirthdateFormat } from '@/components/sign_up/utils/isValidBirthdateFormat';
-import { formatBirthdate } from '@/components/sign_up/utils/formatBirthdate';
+import { isUnder14 } from '@/components/domain/sign_up/utils/isUnder14';
+import { isValidBirthdateFormat } from '@/components/domain/sign_up/utils/isValidBirthdateFormat';
+import { formatBirthdate } from '@/components/domain/sign_up/utils/formatBirthdate';
 
 interface InitialData {
   birthdate: string;

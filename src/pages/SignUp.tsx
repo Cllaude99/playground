@@ -1,15 +1,15 @@
 import { useSearchParams, useNavigate, useLocation } from 'react-router-dom';
 import { useFunnel } from '@/hooks/useFunnel';
-import NameStep from '@/components/sign_up/steps/NameStep';
-import LocationStep from '@/components/sign_up/steps/LocationStep';
-import BirthdayStep from '@/components/sign_up/steps/BirthDayStep';
-import AgreementStep from '@/components/sign_up/steps/AgreementStep';
-import ConfirmStep from '@/components/sign_up/steps/ConfirmStep';
+import NameStep from '@/components/domain/sign_up/steps/NameStep';
+import LocationStep from '@/components/domain/sign_up/steps/LocationStep';
+import BirthdayStep from '@/components/domain/sign_up/steps/BirthDayStep';
+import AgreementStep from '@/components/domain/sign_up/steps/AgreementStep';
+import ConfirmStep from '@/components/domain/sign_up/steps/ConfirmStep';
 import { useState, useRef } from 'react';
-import BeforeButton from '@/components/sign_up/steps/BeforeButton';
+import BeforeButton from '@/components/domain/sign_up/steps/BeforeButton';
 import { useSyncFunnelStepWithQuery } from '@/hooks/sign_up/useSyncFunnelStepWithQuery';
-import { isUnder14 } from '@/components/sign_up/utils/isUnder14';
-import SignUpLayout from '@/components/sign_up/SignUpLayout';
+import { isUnder14 } from '@/components/domain/sign_up/utils/isUnder14';
+import SignUpLayout from '@/components/domain/sign_up/SignUpLayout';
 
 export const SignUpStep = {
   name: 'name',
