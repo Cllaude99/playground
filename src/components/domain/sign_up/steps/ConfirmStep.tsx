@@ -1,4 +1,4 @@
-import { SignUpStepData } from '@/pages/SignUp';
+import { SignUpStepData } from '@/pages/auth/sign_up/SignUp';
 import Button from '../../../ui/button/Button';
 import StepMessage from '../StepMessage';
 import { useNavigate } from 'react-router-dom';

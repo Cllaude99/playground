@@ -1,10 +1,7 @@
-import Layout from '../../layout/Layout';
+import Layout from '@/components/layout/Layout';
+import { PropsWithChildren } from 'react';
 
-interface HomePageLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function HomePageLayout({ children }: HomePageLayoutProps) {
+export default function HomePageLayout({ children }: PropsWithChildren) {
   return (
     <Layout direction="column" fullScreen={true}>
       {children}

@@ -1,8 +1,8 @@
 import SomethingWentWrongPage from '@/components/status/error/SomethingWentWrongPage';
 import { UnknownErrorBoundary } from '@/components/status/error/UnknownErrorBoundary';
-import Home from '@/pages/Home';
-import SignUp from '@/pages/SignUp';
-import SignUpComplete from '@/pages/SignUpComplete';
+import Home from '@/pages/home';
+import SignUp from '@/pages/auth/sign_up/SignUp';
+import SignUpComplete from '@/pages/auth/sign_up/SignUpComplete';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { APIErrorBoundary } from '@/components/status/error/APIErrorBoundary';
 import { Suspense } from 'react';

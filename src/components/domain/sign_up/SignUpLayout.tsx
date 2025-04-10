@@ -1,10 +1,7 @@
-import Layout from '../../layout/Layout';
+import Layout from '@/components/layout/Layout';
+import { PropsWithChildren } from 'react';
 
-interface SignUpLayoutProps {
-  children: React.ReactNode;
-}
-
-export default function SignUpLayout({ children }: SignUpLayoutProps) {
+export default function SignUpLayout({ children }: PropsWithChildren) {
   return (
     <Layout direction="column" className="p-4 gap-3">
       {children}

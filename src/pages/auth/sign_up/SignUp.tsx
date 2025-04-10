@@ -7,7 +7,7 @@ import AgreementStep from '@/components/domain/sign_up/steps/AgreementStep';
 import ConfirmStep from '@/components/domain/sign_up/steps/ConfirmStep';
 import { useState, useRef } from 'react';
 import BeforeButton from '@/components/domain/sign_up/steps/BeforeButton';
-import { useSyncFunnelStepWithQuery } from '@/hooks/sign_up/useSyncFunnelStepWithQuery';
+import { useSyncFunnelStepWithQuery } from '@/hooks/domain/sign_up/useSyncFunnelStepWithQuery';
 import { isUnder14 } from '@/components/domain/sign_up/utils/isUnder14';
 import SignUpLayout from '@/components/domain/sign_up/SignUpLayout';
 
