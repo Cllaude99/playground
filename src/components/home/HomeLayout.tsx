@@ -5,5 +5,9 @@ interface HomePageLayoutProps {
 }
 
 export default function HomePageLayout({ children }: HomePageLayoutProps) {
-  return <Layout direction="column">{children}</Layout>;
+  return (
+    <Layout direction="column" fullScreen={true}>
+      {children}
+    </Layout>
+  );
 }
