@@ -6,7 +6,7 @@ import SignUpComplete from '@/pages/SignUpComplete';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { APIErrorBoundary } from '@/components/error/APIErrorBoundary';
 import { Suspense } from 'react';
-import Loader from '@/components/common/loading/Loader';
+import Loader from '@/components/status/loading/Loader';
 
 const router = createBrowserRouter([
   {
