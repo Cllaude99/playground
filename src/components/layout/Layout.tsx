@@ -1,15 +1,15 @@
 import { mergeClassNames } from '@/utils/mergeClassNames';
+import { PropsWithChildren } from 'react';
 
-interface LayoutProps {
-  fullScreen?: boolean;
+interface LayoutProps extends PropsWithChildren {
   direction: 'row' | 'column';
+  fullScreen?: boolean;
   className?: string;
-  children: React.ReactNode;
 }
 
 export default function Layout({
-  fullScreen = false,
   direction,
+  fullScreen = false,
   className,
   children,
 }: LayoutProps) {
