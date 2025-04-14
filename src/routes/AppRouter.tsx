@@ -7,6 +7,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import { APIErrorBoundary } from '@/components/status/error/APIErrorBoundary';
 import { Suspense } from 'react';
 import Loader from '@/components/status/loading/Loader';
+import FloatingWidget from '@/pages/floating';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: 'sign_up/complete',
         element: <SignUpComplete />,
+      },
+      {
+        path: 'floating',
+        element: <FloatingWidget />,
       },
       {
         path: '*',
