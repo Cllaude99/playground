@@ -1,9 +1,22 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, forwardRef } from 'react';
 
-export default function FloatingWidgetLayout({ children }: PropsWithChildren) {
+interface FloatingWidgetLayoutProps extends PropsWithChildren {
+  containerRef: React.RefObject<HTMLDivElement>;
+}
+
+const FloatingWidgetLayout = forwardRef<
+  HTMLDivElement,
+  FloatingWidgetLayoutProps
+>(({ children, containerRef }) => {
   return (
     <div className="fixed bottom-20 right-32">
-      <div className="relative">{children}</div>
+      <div ref={containerRef} className="relative">
+        {children}
+      </div>
     </div>
   );
-}
+});
+
+FloatingWidgetLayout.displayName = 'FloatingWidgetLayout';
+
+export default FloatingWidgetLayout;
