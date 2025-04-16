@@ -32,10 +32,10 @@ interface TabsContentProps<T> {
 export function useTab<T>(initialTab: T) {
   const [activeTab, setActiveTab] = useState<T>(initialTab);
 
-  function Tabs({ children, className, direction }: TabsProps) {
+  function Tabs({ direction, children, className }: TabsProps) {
     return (
       <div
-        className={`flex h-full ${direction === 'row' ? 'flex-row' : 'flex-col'} ${className}`}
+        className={`flex ${direction === 'row' ? 'flex-row' : 'flex-col'} ${className}`}
       >
         {children}
       </div>
@@ -45,7 +45,11 @@ export function useTab<T>(initialTab: T) {
   function List({ direction, children, className }: TabsListProps) {
     return (
       <div
-        className={`flex flex-shrink-0 ${direction === 'row' ? 'flex-row justify-between' : 'flex-col'} ${className}`}
+        className={`flex ${
+          direction === 'row'
+            ? 'flex-row justify-between border-b border-gray-200'
+            : 'flex-col'
+        } ${className}`}
       >
         {children}
       </div>
@@ -64,9 +68,9 @@ export function useTab<T>(initialTab: T) {
     return (
       <button
         onClick={() => setActiveTab(value)}
-        className={`flex flex-col items-center gap-2 transition-all ${
+        className={`flex flex-col items-center gap-2 px-4 py-2 transition-all ${
           isActive
-            ? 'text-primary border-b-2 border-primary font-medium'
+            ? 'text-primary border-b-2 border-primary -mb-[2px]'
             : 'text-muted-foreground hover:text-primary'
         } ${className}`}
       >
@@ -77,7 +81,7 @@ export function useTab<T>(initialTab: T) {
   }
 
   function ContentWrapper({ children }: TabsContentWrapperProps) {
-    return <div className="flex-1 overflow-y-auto">{children}</div>;
+    return <div className="flex-1 overflow-y-auto min-h-0">{children}</div>;
   }
 
   function Content({ value, children }: TabsContentProps<T>) {
