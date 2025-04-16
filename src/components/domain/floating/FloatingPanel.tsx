@@ -6,6 +6,9 @@ import IconFunctionHelpInactive from '@/assets/icons/IconFunctionHelpInactive.sv
 import IconFunctionHelpActive from '@/assets/icons/IconFunctionHelpActive.svg?react';
 import FloatingPanelLayout from './FloatingPanelLayout';
 import { useTab } from '@/hooks/useTab';
+import AIChartAnalyze from './AIChartAnalyze';
+import AIChartRecommendation from './AIChartRecommendation';
+import FunctionHelp from './FunctionHelp';
 
 export default function FloatingPanel() {
   const TabKey = {
@@ -42,15 +45,17 @@ export default function FloatingPanel() {
             기능 도움말
           </Tabs.Trigger>
         </Tabs.List>
-        <Tabs.Content value={TabKey.CHART_ANALYZE}>
-          AI 차트해석 내용
-        </Tabs.Content>
-        <Tabs.Content value={TabKey.CHART_RECOMMENDATION}>
-          AI 추천판단 내용
-        </Tabs.Content>
-        <Tabs.Content value={TabKey.FUNCTION_HELP}>
-          기능 도움말 내용
-        </Tabs.Content>
+        <Tabs.ContentWrapper>
+          <Tabs.Content value={TabKey.CHART_ANALYZE}>
+            <AIChartAnalyze />
+          </Tabs.Content>
+          <Tabs.Content value={TabKey.CHART_RECOMMENDATION}>
+            <AIChartRecommendation />
+          </Tabs.Content>
+          <Tabs.Content value={TabKey.FUNCTION_HELP}>
+            <FunctionHelp />
+          </Tabs.Content>
+        </Tabs.ContentWrapper>
       </Tabs>
     </FloatingPanelLayout>
   );
