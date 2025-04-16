@@ -5,5 +5,9 @@ export default function useToggle(initialValue: boolean) {
 
   const toggleValue = () => setValue((prev) => !prev);
 
-  return { value, toggleValue };
+  return {
+    value,
+    toggleValue,
+    setValue,
+  };
 }
