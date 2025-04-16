@@ -3,6 +3,7 @@ import { ReactElement, ReactNode, useState } from 'react';
 interface TabsProps {
   direction: 'row' | 'column';
   children: ReactNode;
+  className?: string;
 }
 
 interface TabsListProps {
@@ -19,6 +20,10 @@ interface TabsTriggerProps<T> {
   inactiveIcon?: ReactElement;
 }
 
+interface TabsContentWrapperProps {
+  children: ReactNode;
+}
+
 interface TabsContentProps<T> {
   value: T;
   children: ReactNode;
@@ -27,9 +32,11 @@ interface TabsContentProps<T> {
 export function useTab<T>(initialTab: T) {
   const [activeTab, setActiveTab] = useState<T>(initialTab);
 
-  function Tabs({ direction, children }: TabsProps) {
+  function Tabs({ children, className, direction }: TabsProps) {
     return (
-      <div className={`flex ${direction === 'row' ? 'flex-row' : 'flex-col'}`}>
+      <div
+        className={`flex h-full ${direction === 'row' ? 'flex-row' : 'flex-col'} ${className}`}
+      >
         {children}
       </div>
     );
@@ -38,7 +45,7 @@ export function useTab<T>(initialTab: T) {
   function List({ direction, children, className }: TabsListProps) {
     return (
       <div
-        className={`flex ${direction === 'row' ? 'flex-row justify-between' : 'flex-col'} ${className}`}
+        className={`flex flex-shrink-0 ${direction === 'row' ? 'flex-row justify-between' : 'flex-col'} ${className}`}
       >
         {children}
       </div>
@@ -69,6 +76,10 @@ export function useTab<T>(initialTab: T) {
     );
   }
 
+  function ContentWrapper({ children }: TabsContentWrapperProps) {
+    return <div className="flex-1 overflow-y-auto">{children}</div>;
+  }
+
   function Content({ value, children }: TabsContentProps<T>) {
     if (activeTab !== value) return null;
     return <>{children}</>;
@@ -77,6 +88,7 @@ export function useTab<T>(initialTab: T) {
   Tabs.List = List;
   Tabs.Trigger = Trigger;
   Tabs.Content = Content;
+  Tabs.ContentWrapper = ContentWrapper;
 
   return {
     Tabs,
