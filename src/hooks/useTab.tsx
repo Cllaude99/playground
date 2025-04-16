@@ -35,7 +35,7 @@ export function useTab<T>(initialTab: T) {
   function Tabs({ direction, children, className }: TabsProps) {
     return (
       <div
-        className={`flex ${direction === 'row' ? 'flex-row' : 'flex-col'} ${className}`}
+        className={`flex h-full ${direction === 'row' ? 'flex-row' : 'flex-col'} ${className}`}
       >
         {children}
       </div>
@@ -81,7 +81,7 @@ export function useTab<T>(initialTab: T) {
   }
 
   function ContentWrapper({ children }: TabsContentWrapperProps) {
-    return <div className="flex-1 overflow-y-auto min-h-0">{children}</div>;
+    return <div className="flex-1 overflow-y-auto">{children}</div>;
   }
 
   function Content({ value, children }: TabsContentProps<T>) {
