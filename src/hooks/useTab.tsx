@@ -70,8 +70,8 @@ export function useTab<T>(initialTab: T) {
         onClick={() => setActiveTab(value)}
         className={`flex flex-col items-center gap-2 px-4 py-2 transition-all ${
           isActive
-            ? 'text-primary border-b-2 border-primary -mb-[2px]'
-            : 'text-muted-foreground hover:text-primary'
+            ? 'text-blue-500 border-b-2 border-blue-500 -mb-[2px]'
+            : 'text-muted-foreground'
         } ${className}`}
       >
         {isActive ? activeIcon : inactiveIcon}
