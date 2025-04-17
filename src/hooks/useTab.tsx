@@ -1,13 +1,11 @@
 import { ReactElement, ReactNode, useState } from 'react';
 
 interface TabsProps {
-  direction: 'row' | 'column';
   children: ReactNode;
   className?: string;
 }
 
 interface TabsListProps {
-  direction: 'row' | 'column';
   className?: string;
   children: ReactNode;
 }
@@ -32,24 +30,16 @@ interface TabsContentProps<T> {
 export function useTab<T>(initialTab: T) {
   const [activeTab, setActiveTab] = useState<T>(initialTab);
 
-  function Tabs({ direction, children, className }: TabsProps) {
+  function Tabs({ children, className }: TabsProps) {
     return (
-      <div
-        className={`flex h-full ${direction === 'row' ? 'flex-row' : 'flex-col'} ${className}`}
-      >
-        {children}
-      </div>
+      <div className={`flex h-full flex-col ${className}`}>{children}</div>
     );
   }
 
-  function List({ direction, children, className }: TabsListProps) {
+  function List({ children, className }: TabsListProps) {
     return (
       <div
-        className={`flex ${
-          direction === 'row'
-            ? 'flex-row justify-between border-b border-gray-200'
-            : 'flex-col'
-        } ${className}`}
+        className={`flex flex-row justify-between border-b border-gray-200 ${className}`}
       >
         {children}
       </div>
