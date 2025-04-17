@@ -21,8 +21,8 @@ export default function FloatingPanel() {
 
   return (
     <FloatingPanelLayout>
-      <Tabs direction="column">
-        <Tabs.List direction="row">
+      <Tabs>
+        <Tabs.List>
           <Tabs.Trigger
             value={TabKey.CHART_ANALYZE}
             activeIcon={<IconAIChartAnalyzeActive />}
