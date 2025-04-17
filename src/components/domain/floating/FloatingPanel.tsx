@@ -5,7 +5,7 @@ import IconAIChartRecommendActive from '@/assets/icons/IconAIChartRecommendActiv
 import IconFunctionHelpInactive from '@/assets/icons/IconFunctionHelpInactive.svg?react';
 import IconFunctionHelpActive from '@/assets/icons/IconFunctionHelpActive.svg?react';
 import FloatingPanelLayout from './FloatingPanelLayout';
-import { useTab } from '@/hooks/useTab';
+import { useTab } from '@/hooks/domain/floating/useTab';
 import AIChartAnalyze from './AIChartAnalyze';
 import AIChartRecommendation from './AIChartRecommendation';
 import FunctionHelp from './FunctionHelp';
