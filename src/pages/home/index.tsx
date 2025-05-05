@@ -1,4 +1,5 @@
 import HomeLayout from '@/components/domain/home/HomeLayout';
+import Button from '@/components/ui/button/Button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         </TabsContent>
         <TabsContent value="password">Change your password here.</TabsContent>
       </Tabs>
+      <Button>Click me</Button>
     </HomeLayout>
   );
 }
