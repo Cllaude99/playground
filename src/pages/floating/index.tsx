@@ -3,7 +3,7 @@ import FloatingButton from '@/components/domain/floating/FloatingButton';
 import FloatingPanel from '@/components/domain/floating/FloatingPanel';
 import FloatingWidgetLayout from '@/components/domain/floating/FloatingWidgetLayout';
 import useToggle from '@/hooks/useToggle';
-import useClickOutside from '@/hooks/useClickOutside';
+import { useClickOutside } from '@/hooks/useClickOutside';
 
 export default function FloatingWidget() {
   const floatingRef = useRef<HTMLDivElement>(null);
