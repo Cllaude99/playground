@@ -23,7 +23,7 @@ export function useTab<T>(defaultTab: T) {
 
     return (
       <motion.div
-        className="cursor-pointer pb-2 px-2 -mb-[1.5px] relative"
+        className="cursor-pointer pb-2 px-2 relative"
         onClick={() => setActiveTab(value)}
       >
         <span className={isActive ? 'text-gray-100' : 'text-gray-300'}>
@@ -31,7 +31,7 @@ export function useTab<T>(defaultTab: T) {
         </span>
         {isActive && (
           <motion.div
-            className="absolute bottom-0 left-0 right-0 h-[3px] bg-gray-100"
+            className="absolute -bottom-0.5 left-0 right-0 h-[3px] bg-gray-100"
             layoutId="activeTab"
           />
         )}
