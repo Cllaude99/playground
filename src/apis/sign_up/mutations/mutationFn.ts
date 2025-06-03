@@ -6,6 +6,10 @@ import {
 import { signUpApi } from '../index';
 import { SignUpRequestDto, SignUpResponseDto } from '../dto';
 
+/**
+ * @summary 회원가입
+ * @request POST:/api/signup
+ */
 export const usePostSignUpMutation = (
   options?: Omit<
     UseMutationOptions<SignUpResponseDto, DefaultError, SignUpRequestDto>,
